@@ -18,11 +18,11 @@ This script sets up a primary DNS server using BIND 9 on Debian 12. It configure
 
 
 3. Make the script executable:
-`chmod +x setup-dns-server.sh`
+`chmod +x server-dns-primary-ipv4.sh`
 
 
 4. Run the script as root:
-`sudo ./setup-dns-server.sh`
+`sudo ./server-dns-primary-ipv4.sh`
 
 
 5. Verify the DNS server is working:
