@@ -2,8 +2,8 @@
 This script sets up a primary DNS server using BIND 9 on Debian 12. It configures the server to be both recursive and authoritative.
 
 ## Usage
+Replace placeholders in `server-dns-primary-ipv4.sh` with your actual server details:
 
-1. Replace placeholders in `server-dns-primary-ipv4.sh` with your actual server details:
    - `[YOUR_SERVER_IP]`
    - `[FORWARDER_1_IP]`, `[FORWARDER_2_IP]`
    - `[YOUR_DOMAIN]`
@@ -11,21 +11,22 @@ This script sets up a primary DNS server using BIND 9 on Debian 12. It configure
    - `[SERIAL_NUMBER]`
    - `[LAST_OCTET]`
 
+## Steps:
 
-2. Clone the repository and navigate to the directory:
+1. Clone the repository and navigate to the directory:
 `git clone https://github.com/danielselbachtechofc/server-dns-primary-ipv4.git`
 `cd server-dns-primary-ipv4`
 
 
-3. Make the script executable:
+2. Make the script executable:
 `chmod +x server-dns-primary-ipv4.sh`
 
 
-4. Run the script as root:
+3. Run the script as root:
 `sudo ./server-dns-primary-ipv4.sh`
 
 
-5. Verify the DNS server is working:
+4. Verify the DNS server is working:
 `nslookup google.com 127.0.0.1`
 `nslookup ns.[YOUR_DOMAIN] 127.0.0.1`
 
