@@ -13,23 +13,21 @@ This script sets up a primary DNS server using BIND 9 on Debian 12. It configure
 
 
 2. Clone the repository and navigate to the directory:
-
-   ```bash
-   git clone https://github.com/danielselbachtechofc/server-dns.git
-   cd dns-server-setup
+`git clone https://github.com/danielselbachtechofc/server-dns.git`
+`cd dns-server-setup`
 
 
 3. Make the script executable:
-chmod +x setup-dns-server.sh
+`chmod +x setup-dns-server.sh`
 
 
 4. Run the script as root:
-sudo ./setup-dns-server.sh
+`sudo ./setup-dns-server.sh`
 
 
 5. Verify the DNS server is working:
-nslookup google.com 127.0.0.1
-nslookup ns.[YOUR_DOMAIN] 127.0.0.1
+`nslookup google.com 127.0.0.1`
+`nslookup ns.[YOUR_DOMAIN] 127.0.0.1`
 
 Notes
 Ensure your firewall settings allow DNS traffic on port 53.
