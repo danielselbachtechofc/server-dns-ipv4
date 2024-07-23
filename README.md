@@ -3,7 +3,7 @@ This script sets up a primary DNS server using BIND 9 on Debian 12. It configure
 
 ## Usage
 
-1. Replace placeholders in `setup-dns-server.sh` with your actual server details:
+1. Replace placeholders in `server-dns-primary-ipv4.sh` with your actual server details:
    - `[YOUR_SERVER_IP]`
    - `[FORWARDER_1_IP]`, `[FORWARDER_2_IP]`
    - `[YOUR_DOMAIN]`
