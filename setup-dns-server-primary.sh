@@ -71,29 +71,29 @@ EOF
 # Create the forward zone file
 cat > /etc/bind/db.$DOMAIN <<EOF
 \$TTL    604800
-@       IN      SOA     ns.$DOMAIN. admin.$DOMAIN. (
+@       IN      SOA     ns1.$DOMAIN. admin.$DOMAIN. (
                           $SERIAL_NUMBER   ; Serial
                           604800            ; Refresh
                           86400             ; Retry
                           2419200           ; Expire
                           604800 )          ; Negative Cache TTL
 ;
-@       IN      NS      ns.$DOMAIN.
+@       IN      NS      ns1.$DOMAIN.
 @       IN      A       $SERVER_IP
-ns      IN      A       $SERVER_IP
+ns1     IN      A       $SERVER_IP
 EOF
 
 # Create the reverse zone file
 cat > /etc/bind/db.$REVERSE_ZONE <<EOF
 \$TTL    604800
-@       IN      SOA     ns.$DOMAIN. admin.$DOMAIN. (
+@       IN      SOA     ns1.$DOMAIN. admin.$DOMAIN. (
                           $SERIAL_NUMBER   ; Serial
                           604800            ; Refresh
                           86400             ; Retry
                           2419200           ; Expire
                           604800 )          ; Negative Cache TTL
 ;
-@       IN      NS      ns.$DOMAIN.
+@       IN      NS      ns1.$DOMAIN.
 $LAST_OCTET   IN      PTR     $DOMAIN.
 EOF
 
@@ -114,8 +114,10 @@ echo "[+] Checking reverse zone file"
 named-checkzone $REVERSE_ZONE.in-addr.arpa /etc/bind/db.$REVERSE_ZONE
 
 echo "[+] Restarting BIND service"
-systemctl restart bind9
-systemctl enable bind9
+systemctl restart named.service
+
+echo "[+] Enabling BIND service"
+systemctl enable named.service
 
 echo "####################################################################"
 echo "## DNS Server configuration complete.                             ##"
