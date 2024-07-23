@@ -16,7 +16,7 @@ This script sets up a primary DNS server using BIND 9 on Debian 12. It configure
 2. Clone the repository and navigate to the directory:
 
    ```bash
-   git clone https://github.com/yourusername/dns-server-setup.git
+   git clone https://github.com/danielselbachtechofc/server-dns.git
    cd dns-server-setup
 
 
