@@ -1,5 +1,4 @@
 # DNS Server Setup Script
-
 This script sets up a primary DNS server using BIND 9 on Debian 12. It configures the server to be both recursive and authoritative.
 
 ## Usage
