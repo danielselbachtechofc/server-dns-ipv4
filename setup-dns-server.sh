@@ -30,9 +30,9 @@ apt-get install -y bind9 bind9utils bind9-doc
 
 echo "[+] Configuring BIND 9"
 # Backup original configuration files
-cp /etc/bind/named.conf /etc/bind/named.conf.bak
-cp /etc/bind/named.conf.local /etc/bind/named.conf.local.bak
-cp /etc/bind/named.conf.options /etc/bind/named.conf.options.bak
+cp /etc/bind/named.conf /etc/bind/named.conf.backup
+cp /etc/bind/named.conf.local /etc/bind/named.conf.local.backup
+cp /etc/bind/named.conf.options /etc/bind/named.conf.options.backup
 
 # Configure named.conf.options
 cat > /etc/bind/named.conf.options <<EOF
