@@ -22,13 +22,17 @@ read -p "Enter the forwarder 2 IP: " FORWARDER_2_IP
 read -p "Enter the serial number (e.g., 2024072301): " SERIAL_NUMBER
 read -p "Enter the last octet of the reverse IP: " LAST_OCTET
 
+# Update package lists
 echo "[+] Updating package lists"
 apt-get update
 
+# Install BIND9
 echo "[+] Installing BIND 9"
 apt-get install -y bind9 bind9utils bind9-doc
 
+# Configure BIND9
 echo "[+] Configuring BIND 9"
+
 # Backup original configuration files
 cp /etc/bind/named.conf /etc/bind/named.conf.backup
 cp /etc/bind/named.conf.local /etc/bind/named.conf.local.backup
@@ -104,19 +108,24 @@ chmod 644 /etc/bind/db.$DOMAIN
 chown bind:bind /etc/bind/db.$REVERSE_ZONE
 chmod 644 /etc/bind/db.$REVERSE_ZONE
 
+# Verify BIND configuration
 echo "[+] Checking BIND configuration"
 named-checkconf
 
+# Check forwarding zone file
 echo "[+] Checking forward zone file"
 named-checkzone $DOMAIN /etc/bind/db.$DOMAIN
 
+# Check reverse zone file
 echo "[+] Checking reverse zone file"
 named-checkzone $REVERSE_ZONE.in-addr.arpa /etc/bind/db.$REVERSE_ZONE
 
-echo "[+] Restarting BIND service"
+# Restart the NAMED service
+echo "[+] Restarting NAMED service"
 systemctl restart named.service
 
-echo "[+] Enabling BIND service"
+# Enable NAMED service
+echo "[+] Enabling NAMED service"
 systemctl enable named.service
 
 echo "####################################################################"
