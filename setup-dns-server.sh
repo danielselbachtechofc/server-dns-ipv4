@@ -3,7 +3,7 @@
 #########################################################################################
 # DANIEL S. FIGUEIRÓ                                                                    #
 # NETWORK SPECIALIST                                                                    #
-# E-MAIL: danielselbach.fig@gmail.com                                                   #
+# LINKEDIN: https://www.linkedin.com/in/danielselbachtech/                              #
 # Script V.: 1.0 - BIND9                                                                #
 #########################################################################################
 
