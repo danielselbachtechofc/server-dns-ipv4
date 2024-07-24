@@ -7,6 +7,7 @@
 # Script V.: 1.0 - BIND9                                                                #
 #########################################################################################
 
+# Check root permissions
 echo "[+] Checking for root permissions"
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script as root"
