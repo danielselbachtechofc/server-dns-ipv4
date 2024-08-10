@@ -2,9 +2,9 @@
 
 #########################################################################################
 # DANIEL S. FIGUEIRÓ                                                                    #
-# IT Consultant                                                                         #
+# IT CONSULTANT                                                                         #
 # LINKEDIN: https://www.linkedin.com/in/danielselbachtech/                              #
-# Script V.: 1.0 - BIND9                                                                #
+# SCRIPT V.: 1.0 - BIND9                                                                #
 #########################################################################################
 
 # Check root permissions
