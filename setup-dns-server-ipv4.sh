@@ -2,7 +2,7 @@
 
 #########################################################################################
 # DANIEL S. FIGUEIRÓ                                                                    #
-# NETWORK SPECIALIST                                                                    #
+# IT Consultant                                                                         #
 # LINKEDIN: https://www.linkedin.com/in/danielselbachtech/                              #
 # Script V.: 1.0 - BIND9                                                                #
 #########################################################################################
