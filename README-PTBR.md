@@ -7,11 +7,11 @@ Substitua os marcadores de posição em `setup-dns-server-ipv4.sh` pelos detalhe
 - `[IP_DO_SEU_SERVIDOR]`
 - `[SEU_DOMÍNIO]`
 - `[ZONA_REVERSA]`
-- `[IP_DA_FORÇA_1]`
-- `[IP_DA_FORÇA_2]`
-- `[NÚMERO_DE_SÉRIE]`
+- `[FORWARDER_1_IP]`
+- `[FORWARDER_2_IP]`
+- `[SERIAL_NUMBER]`
 - `[ÚLTIMO_OCTETO]`
-
+  
 ## Etapas:
 
 1. Clone o repositório e navegue até o diretório:
